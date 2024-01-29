@@ -9,6 +9,10 @@ table.tabla2{
 }
 table.tabla3{
     border: green 1px solid;
+    text-align: center;
+    position: relative;
+    height: 30px;
+    width: 600px;
 }
 td.verde{
     border: green 1px solid;
