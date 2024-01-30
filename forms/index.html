@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h2>Formularis</h2></header>
+    <form action="web.php" method="post">
+        <p>input types text <br>
+Nom <input type="text" name="nom" id="nom">
+Password <input type="password" name="pass" id="pass">
+<input type="hidden" nom="ocult" id="ocult" value="id_camiseta">
+<p>numeros<hr>
+    edat 
+    <input  type="number"  min="18" step="any" name="edat" id="edat">
+
+
+</p>
+        </p>
+        <input type="submit" value="enviar" id="reset">
+        <input type="reset" value="reset" id="reset">
+        <input type="button" value="pulsar" id="pulsar">
+    </form>
+    <p>
+        Qué nota tienes (min 5, max 10)
+        <input type="range" id="rango" min="5" max="10" step="1">
+       </p>
+       <p>Nota: <span id="nota"></span></p>
+       </div>
+       </main>
+       <textarea name="observacions" id="observacions" cols="30" rows="10"></textarea>
+       <input type="file">
+       menu 
+       <select name="menu" id="menu">
+        <option selected value="0">Selecciona talla</option>
+        <option value="1">uno</option>
+        <option value="2">dos</option>
+        <option   value="3">tres</option>
+       </select>
+
+       <script>
+        var slider = document.getElementById( "rango");
+        var output = document.getElementById( "nota");
+        output.innerHTML = slider.value;
+       
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+        </script>
+       </body> 
+</html>
